@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Medicine Remainder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_medicine_reminder">Add Medicine Reminder</string>
+    <string name="add_new_event">Add New Event</string>
+    <string name="appointment">Appointment</string>
+    <string name="title_activity_add_refil">Add Refill Reminder</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="nav_open">Nav Open</string>
+    <string name="nav_close">Nav Close</string>
+    <string name="already_have_account">Already have account? <b><font fgcolor='#4A148C'>Login.</font></b></string>
+    <string name="you_are_not_a_member_register">Your not a member ? <b><font fgcolor='#4A148C'>Register.</font></b></string>
+    <string name="nice_to_see_you">Nice to see you!</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="name_hint">Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="font_color_ffffff_add_appointment_font"><font color='#ffffff'>Save </font></string>
+    <string name="edit"><font color='#ffffff'>Edit</font></string>
+    <string name="dismiss">Dismiss</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+</resources>

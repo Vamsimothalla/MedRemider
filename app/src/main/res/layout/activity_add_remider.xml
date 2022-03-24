@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.add.AddReminderActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        >
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/img_rem"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleGravity="center_horizontal"
+            app:collapsedTitleGravity="center_vertical"
+            app:expandedTitleTextAppearance="@style/MyStyle.ActionBar.Title.Style"
+            app:toolbarId="@+id/toolbar">
+            <View
+                android:background="#67000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                 />
+            <FrameLayout
+                app:layout_collapseMode="parallax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                >
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/linearlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_info_24"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:tint="@color/white" />
+                    <TextView
+                        android:layout_marginHorizontal="10dp"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Create a reminder that's to remind you about an upcoming medication"
+                        android:textColor="@android:color/white"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+<androidx.core.widget.NestedScrollView
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/childRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/medicine_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="24dp">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Medicine Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/medicine_type_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/purpose_of_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medicine_type"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Purpose of Medicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/purpose_of_medicine_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/medicine_dosage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/purpose_of_medicine"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medicine Dosage"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/medicine_dosage_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medicine_dosage"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Daily"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/calenderButtons"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/daily"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/calendersLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/startDateLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/startDateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="63dp"
+                        android:fontFamily="@font/mulish_light"
+                        android:gravity="center"
+                        android:text="Start Date"
+                        android:textColor="#121212"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/startDateButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="130dp"
+                        android:src="@drawable/ic_baseline_calendar_today_24" />
+
+                    <TextView
+                        android:id="@+id/startDateSelected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="200dp"
+                        android:gravity="center"
+                        android:text="mm/dd/yyyy"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stopDateLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/endDateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="63dp"
+                        android:fontFamily="@font/mulish_light"
+                        android:gravity="center"
+                        android:text="End Date"
+                        android:textColor="#121212"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/endDateButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="130dp"
+                        android:src="@drawable/ic_baseline_calendar_today_24" />
+                    <TextView
+                        android:id="@+id/endDateSelected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="200dp"
+                        android:gravity="center"
+                        android:text="mm/dd/yyyy"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/weekDaysRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calenderButtons"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/weekDaysSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reminder"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/weekHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/moreTv"
+                    android:text="Every Day" />
+
+                <TextView
+                    android:id="@+id/moreTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=">"
+                    android:textColor="#000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timeSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weekDaysSelection"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/tMoreTv"
+                    android:text="3 Time a day" />
+
+                <TextView
+                    android:id="@+id/tMoreTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=">"
+                    android:textColor="#000" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                android:id="@+id/medicineImageLayout"
+                android:layout_below="@+id/timeSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:text="Medicine Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_img"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/medicineImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

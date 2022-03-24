@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "240980930707",
+    "project_id": "test-3281b",
+    "storage_bucket": "test-3281b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240980930707:android:88cbac4bb78a5e53635d66",
+        "android_client_info": {
+          "package_name": "com.perfex.medicineremainder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240980930707-55lbt2kcnhhaagp7ufepo1dj02ekl1iu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHf30JxfSaL6CJ9pNMzOt2JZvLiWBfUSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240980930707-55lbt2kcnhhaagp7ufepo1dj02ekl1iu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

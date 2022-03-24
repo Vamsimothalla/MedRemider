@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/avd_add.xml" value="0.1245" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/avd_event.xml" value="0.1245" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/avd_home.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/avd_note.xml" value="0.1245" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/avd_settings.xml" value="0.1245" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/button_bg.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_alarm_white.xml" value="0.156" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.127" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.1455" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.1455" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.127" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_baseline_notifications_black.xml" value="0.1145" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/ic_launcher_background.xml" value="0.169" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/meow_navigation_cell.xml" value="0.1455" />
+        <entry key="..\:/PerfexTech/app/src/main/res/drawable/text_new_events_bg.xml" value="0.154" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout-land/activity_add_new_event.xml" value="0.2923433874709977" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add.xml" value="0.176" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_appointment.xml" value="0.264" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_check_up.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_new_event.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_note.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_refil.xml" value="0.15789473684210525" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_remaider.xml" value="0.21927083333333333" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_remider.xml" value="0.20705882352941177" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_appointment_detail.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_check_up_detail.xml" value="0.2" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_medicine_reminder.xml" value="0.16246259085079093" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_notifications.xml" value="0.4421052631578947" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_password_change.xml" value="0.264" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_reciver.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_refill_detail.xml" value="0.16" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_sign_up.xml" value="0.4" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/appointment_single_item.xml" value="0.4" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/check_up_single_item.xml" value="0.4" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/content_add_refil.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/custom_action_bar.xml" value="0.4" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_account_settings.xml" value="0.14621633176571183" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_add.xml" value="0.2" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_add2.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_appointment.xml" value="0.2" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_check_up.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_events.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_refil.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/fragment_settings.xml" value="0.20208333333333334" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/login_screen.xml" value="0.15176470588235294" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/medicine_single_item.xml" value="0.5031446540880503" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/meow_navigation_cell.xml" value="0.10773834972210346" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/nav_header.xml" value="1.1146496815286624" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/note_single_item.xml" value="0.46972477064220186" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/notification_single_item.xml" value="0.2695187165775401" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/placeholder.xml" value="0.264" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/refill_single_item.xml" value="0.5882352941176471" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/sign_up_screen.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/slider_layout.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/timing_bottom.xml" value="0.4" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/timing_list_view.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/weed_days_spinner_single_item.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/week_day_bootom_sheet.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/week_days_spinner_single_item.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/menu/edit_menu.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/menu/home_menu_bar.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/menu/nav_drawer_menu.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/menu/save_menu.xml" value="0.17999144933732364" />
+        <entry key="..\:/PerfexTech/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.154" />
+        <entry key="..\:/PerfexTech/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.169" />
+        <entry key="..\:/PerfexTech/app/src/main/res/xml/file_paths.xml" value="0.16246259085079093" />
+        <entry key="..\:/PerfexTech/app/src/main/res/xml/root_preferences.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

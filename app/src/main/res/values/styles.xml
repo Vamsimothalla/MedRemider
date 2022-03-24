@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonBackground" >
+        <item name="android:background">@drawable/button_bg</item>
+    </style>
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_bg</item>
+    </style>
+    <style name="MyStyle.ActionBar.Title.Style" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="EditTextTheme" parent="Widget.AppCompat.EditText">
+        <item name="android:colorControlActivated">#000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">1dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@null</item>
+        <item name="android:editable">false</item>
+        <item name="android:colorControlHighlight">#000</item>
+    </style>
+    <style name="EditTextTheme1" parent="Widget.AppCompat.EditText">
+
+    </style>
+    <style name="AppBarLayout">
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>

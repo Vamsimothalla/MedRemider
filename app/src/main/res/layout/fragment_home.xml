@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_alignParentTop="true"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.perfex.medicineremainder.views.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/placeholder"/>
+            <include layout="@layout/placeholder"/>
+            <include layout="@layout/placeholder"/>
+            <include layout="@layout/placeholder"/>
+            <include layout="@layout/placeholder"/>
+            <include layout="@layout/placeholder"/>
+            <include layout="@layout/placeholder"/>
+            <include layout="@layout/placeholder"/>
+        </LinearLayout>
+    </com.perfex.medicineremainder.views.ShimmerFrameLayout>
+</RelativeLayout>
