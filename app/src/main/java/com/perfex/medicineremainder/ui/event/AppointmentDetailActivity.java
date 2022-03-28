@@ -15,6 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -25,6 +30,7 @@ import com.perfex.medicineremainder.database.user.AppDatabase;
 import com.perfex.medicineremainder.databinding.ActivityAppointmentDetailBinding;
 import com.perfex.medicineremainder.model.Appointment;
 import com.perfex.medicineremainder.ui.add.AddAppointmentActivity;
+import com.perfex.medicineremainder.utils.Constants;
 import com.perfex.medicineremainder.utils.ViewGroupUtil;
 
 import java.text.ParseException;
@@ -47,6 +53,7 @@ public class AppointmentDetailActivity extends AppCompatActivity {
     private Calendar myCalendar = Calendar.getInstance();
     private String setDate;
     private AlarmReceiver alarmReceiver;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -203,6 +210,35 @@ public class AppointmentDetailActivity extends AppCompatActivity {
         temp.setTime(time);
         myCalendar.set(Calendar.MINUTE,temp.get(Calendar.MINUTE));
         myCalendar.set(Calendar.HOUR_OF_DAY,temp.get(Calendar.HOUR_OF_DAY));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(this, Constants.AD_INT, adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        mInterstitialAd = interstitialAd;
+                        Log.i("TAG", "onAdLoaded");
+                    }
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        Log.i("TAG", loadAdError.getMessage());
+                        mInterstitialAd = null;
+                    }
+                });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd != null) {
+            mInterstitialAd.show(this);
+        }
     }
 
     private void setDate() throws ParseException {

@@ -14,14 +14,24 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.perfex.medicineremainder.MainActivity;
 import com.perfex.medicineremainder.R;
 import com.perfex.medicineremainder.database.user.AppDatabase;
 import com.perfex.medicineremainder.database.user.medicine.Medicine;
 import com.perfex.medicineremainder.databinding.ActivityMedicineReminderBinding;
 import com.perfex.medicineremainder.ui.add.AddReminderActivity;
+import com.perfex.medicineremainder.utils.Constants;
 import com.perfex.medicineremainder.utils.ViewGroupUtil;
 
 import java.util.ArrayList;
@@ -36,6 +46,7 @@ public class MedicineReminderActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     ArrayList<EditText> oldEditText,newEditText;
     private Medicine medicine;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +67,61 @@ public class MedicineReminderActivity extends AppCompatActivity {
         oldEditText =new ArrayList<>();
         newEditText = new ArrayList<>();
         findAllEditTexts();
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+            InterstitialAd.load(this, Constants.AD_INT, adRequest,
+                    new InterstitialAdLoadCallback() {
+                        @Override
+                        public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                            mInterstitialAd = interstitialAd;
+                            Log.i("TAG", "onAdLoaded");
+                        }
+                        @Override
+                        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                            Log.i("TAG", loadAdError.getMessage());
+                            mInterstitialAd = null;
+                        }
+                    });
+
+        binding.adView.loadAd(adRequest);
+        binding.adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdClicked() {
+                super.onAdClicked();
+                Log.d("TAG", "onAdClicked: ");
+            }
+
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                Log.d("TAG", "onAdClosed: ");
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+                Log.d("TAG", "onAdFailedToLoad: ");
+            }
+
+            @Override
+            public void onAdImpression() {
+                super.onAdImpression();
+                Log.d("TAG", "onAdImpression: ");
+            }
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                Log.d("TAG", "onAdLoaded: ");
+            }
+
+            @Override
+            public void onAdOpened() {
+                super.onAdOpened();
+                Log.d("TAG", "onAdOpened: ");
+            }
+        });
     }
     private void findAllEditTexts() {
         oldEditText.add(binding.medicineTypeEt);
@@ -114,18 +180,25 @@ public class MedicineReminderActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd!=null){
+            mInterstitialAd.show(this);
+        }
+    }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         selectMenu(menu);
         return true;
     }
     private void selectMenu(Menu menu){
         menu.clear();
+        MenuInflater inflater = getMenuInflater();
         if(isEditMode){
-            MenuInflater inflater = getMenuInflater();
             inflater.inflate(R.menu.save_menu, menu);
         }
         else {
-            MenuInflater inflater = getMenuInflater();
             inflater.inflate(R.menu.edit_menu, menu);
         }
     }

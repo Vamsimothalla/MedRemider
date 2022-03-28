@@ -1,9 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.note.NoteDetailsActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.note.AddNoteActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:background="@drawable/note_img"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleGravity="center_horizontal"
+            app:collapsedTitleGravity="center_vertical"
+            app:expandedTitleTextAppearance="@style/MyStyle.ActionBar.Title.Style"
+            app:toolbarId="@+id/toolbar"
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+            <View
+                android:background="#67000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <FrameLayout
+                app:layout_collapseMode="parallax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                >
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/linearlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_info_24"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:tint="@color/white" />
+                    <TextView
+                        android:layout_marginHorizontal="10dp"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Create a note for prescription and address of where the medicines available"
+                        android:textColor="@android:color/white"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="24dp">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:text="Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/title_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@id/title"
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="24dp">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:text="Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:gravity="top|left"
+                    android:id="@+id/address_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@id/location"
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="24dp">
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:text="Prescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:inputType="textMultiLine"
+                    android:id="@+id/prescription_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|left"
+                    android:hint="" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

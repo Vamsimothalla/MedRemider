@@ -53,7 +53,7 @@
                     android:gravity="center_horizontal"
                     >
                     <ImageView
-                        android:visibility="gone"
+                        android:visibility="visible"
                         android:layout_marginStart="10dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_baseline_info_24"
@@ -66,13 +66,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text=""
+                        android:text="Details of medicine reminder that reminds you to take medicine"
                         android:textColor="@android:color/white"
                         />
                 </LinearLayout>
             </FrameLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <androidx.cardview.widget.CardView
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_margin="5dp"
@@ -152,7 +156,6 @@
                         android:text="Medicine Dosage"
                         android:textColor="#000"
                         android:textStyle="bold" />
-
                     <EditText
                         android:focusable="false"
                         android:focusableInTouchMode="true"
@@ -326,8 +329,22 @@
                             android:text=""
                             android:textColor="#000" />
                     </RelativeLayout>
+                    <com.google.android.gms.ads.AdView
+                        android:layout_marginTop="@dimen/padding_10"
+                        android:layout_below="@id/timeSelection"
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+                    </com.google.android.gms.ads.AdView>
                 </RelativeLayout>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

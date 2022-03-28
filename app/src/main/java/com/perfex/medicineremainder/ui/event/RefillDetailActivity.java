@@ -15,6 +15,11 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,6 +31,7 @@ import com.perfex.medicineremainder.database.user.AppDatabase;
 import com.perfex.medicineremainder.databinding.ActivityRefillDetailBinding;
 import com.perfex.medicineremainder.model.Refill;
 import com.perfex.medicineremainder.ui.add.AddRefilActivity;
+import com.perfex.medicineremainder.utils.Constants;
 import com.perfex.medicineremainder.utils.Validator;
 import com.perfex.medicineremainder.utils.ViewGroupUtil;
 
@@ -44,6 +50,7 @@ public class RefillDetailActivity extends AppCompatActivity {
     ArrayList<EditText> oldEditText,newEditText;
     private Refill refill;
     private String firstDate,secondDate;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,5 +166,32 @@ public class RefillDetailActivity extends AppCompatActivity {
         else {
             inflater.inflate(R.menu.edit_menu, menu);
         }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd != null) {
+            mInterstitialAd.show(this);
+        }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(this, Constants.AD_INT, adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        mInterstitialAd = interstitialAd;
+                        Log.i("TAG", "onAdLoaded");
+                    }
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        Log.i("TAG", loadAdError.getMessage());
+                        mInterstitialAd = null;
+                    }
+                });
     }
 }

@@ -29,7 +29,7 @@
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_appointment.xml" value="0.264" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_check_up.xml" value="0.1" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_new_event.xml" value="0.1" />
-        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_note.xml" value="0.1" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_note.xml" value="0.128" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_refil.xml" value="0.15789473684210525" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_remaider.xml" value="0.21927083333333333" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_add_remider.xml" value="0.20705882352941177" />
@@ -37,7 +37,8 @@
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_check_up_detail.xml" value="0.2" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_main.xml" value="0.16" />
-        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_medicine_reminder.xml" value="0.16246259085079093" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_medicine_reminder.xml" value="0.264" />
+        <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_note_details.xml" value="0.176" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_notifications.xml" value="0.4421052631578947" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_password_change.xml" value="0.264" />
         <entry key="..\:/PerfexTech/app/src/main/res/layout/activity_profile.xml" value="0.3333333333333333" />

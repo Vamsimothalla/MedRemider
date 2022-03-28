@@ -24,5 +24,4 @@
         android:title="Settings"
         android:icon="@drawable/ic_baseline_settings_24">
     </item>
-
 </menu>
