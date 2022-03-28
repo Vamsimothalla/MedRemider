@@ -110,4 +110,5 @@ public class NoteDetailsActivity extends AppCompatActivity {
             inflater.inflate(R.menu.edit_menu, menu);
         }
     }
+
 }
